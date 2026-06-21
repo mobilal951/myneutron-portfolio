@@ -119,20 +119,10 @@ export function GAConnectDialog() {
         <Button
           variant="ghost"
           size="sm"
-          className={`w-full justify-start px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-            isGAConnected
-              ? "text-green-400 hover:bg-slate-800 hover:text-green-300"
-              : "text-orange-400 hover:bg-slate-800 hover:text-orange-300"
-          }`}
+          className="w-full justify-start px-3 py-2 text-sm font-medium rounded-lg transition-colors text-amber-300 hover:bg-slate-800 hover:text-amber-200"
         >
-          {isLoading || isSaving ? (
-            <Loader2 className="h-5 w-5 mr-3 animate-spin" />
-          ) : isGAConnected ? (
-            <CheckCircle2 className="h-5 w-5 mr-3" />
-          ) : (
-            <Link2 className="h-5 w-5 mr-3" />
-          )}
-          {isSaving ? "Saving..." : isGAConnected ? "GA Connected" : "GA Not Connected"}
+          <Link2 className="h-5 w-5 mr-3" />
+          Demo data · not live GA
         </Button>
       </DialogTrigger>
       <DialogContent className="max-w-[calc(100vw-32px)] sm:max-w-md mx-4">
