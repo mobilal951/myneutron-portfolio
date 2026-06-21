@@ -1,17 +1,17 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const { searchParams } = new URL(request.url);
+  const chatId = searchParams.get("chatId");
   return NextResponse.json({
+    chatId,
     messages: [
-      { id: "m1", userId: "u_001", role: "user",      content: "How do I add a new seed for the chatbot?",                          created_at: "2026-06-21T18:42:00Z" },
-      { id: "m2", userId: "u_001", role: "assistant", content: "Open the Seeds tab, click 'New seed', paste the source material...", created_at: "2026-06-21T18:42:08Z" },
-      { id: "m3", userId: "u_003", role: "user",      content: "What's the difference between basic and pro plans?",                created_at: "2026-06-21T17:14:00Z" },
-      { id: "m4", userId: "u_003", role: "assistant", content: "Pro includes 2,500 credits/month, priority models, and team seats.", created_at: "2026-06-21T17:14:11Z" },
-      { id: "m5", userId: "u_006", role: "user",      content: "Why are my credits not refreshing?",                                 created_at: "2026-06-21T15:08:00Z" },
-      { id: "m6", userId: "u_006", role: "assistant", content: "Credits refresh on your billing anniversary. Your next refresh is...", created_at: "2026-06-21T15:08:14Z" },
-      { id: "m7", userId: "u_007", role: "user",      content: "Can I export my chat history?",                                      created_at: "2026-06-21T12:55:00Z" },
-      { id: "m8", userId: "u_007", role: "assistant", content: "Yes — under Account → Data, click 'Export chats'. You'll get a JSON dump.", created_at: "2026-06-21T12:55:09Z" },
+      { id: "m1", role: "user",      content: "How do I add a new seed for the chatbot?",                              createdAt: "2026-06-21T18:42:00Z" },
+      { id: "m2", role: "assistant", content: "Open the Seeds tab, click 'New seed', paste the source material...",   createdAt: "2026-06-21T18:42:08Z" },
+      { id: "m3", role: "user",      content: "Do I have to wait for it to be processed?",                            createdAt: "2026-06-21T18:43:00Z" },
+      { id: "m4", role: "assistant", content: "Yes — chunking + embedding usually takes about 30 seconds for...",     createdAt: "2026-06-21T18:43:12Z" },
+      { id: "m5", role: "user",      content: "Got it, thanks.",                                                       createdAt: "2026-06-21T18:43:50Z" },
+      { id: "m6", role: "assistant", content: "Anytime — let me know if it doesn't show up after a minute.",          createdAt: "2026-06-21T18:43:55Z" },
     ],
-    total: 1820,
   });
 }
