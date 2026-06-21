@@ -5,11 +5,20 @@ export async function GET() {
   const dates = lastNDates(30, "YYYY-MM-DD");
   const signupsByDay = distribute(51, 30, 21);
   return NextResponse.json({
-    totalUsers: 248,
-    activeUsers: 195,
-    newUsersToday: 1,
-    newUsersThisWeek: 12,
-    newUsersThisMonth: 51,
-    byDay: dates.map((date, i) => ({ date, signups: signupsByDay[i] })),
+    overview: {
+      totalUsers: 248,
+      newUsersLast7Days: 12,
+      activeSubscriptions: 4,
+      paidSubscriptions: 4,
+      totalSeeds: 86,
+      totalChunks: 1428,
+      extensionUsers: 1156,
+    },
+    subscriptions: {
+      free: 244,
+      basic: 3,
+      pro: 1,
+    },
+    dailySignups: dates.map((date, i) => ({ date, count: signupsByDay[i] })),
   });
 }

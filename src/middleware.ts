@@ -7,7 +7,7 @@ export function middleware(request: NextRequest) {
   // Only allow access to password page, password API, and static assets without authentication
   const publicPaths = [
     "/password",
-    "/api/auth/password",
+    "/api/auth",  // NextAuth + password gate routes
     "/_next",
     "/favicon.ico",
     "/icon.svg",
