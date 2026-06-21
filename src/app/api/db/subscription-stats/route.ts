@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 
 export async function GET() {
   return NextResponse.json({
@@ -26,18 +26,18 @@ export async function GET() {
       { code: "LAUNCH50", count: 1 },
     ],
     subscribers: [
-      { id: "s1", userName: "Ada Lovelace",   plan: "pro",   billingCycle: "yearly",  amount: 480, status: "active",    startDate: "2026-03-15T10:00:00Z", createdAt: "2026-03-15T10:00:00Z", cancelledAt: null,                  usedPromoCode: true  },
-      { id: "s2", userName: "Linus Torvalds", plan: "basic", billingCycle: "monthly", amount: 9,   status: "active",    startDate: "2026-04-22T10:00:00Z", createdAt: "2026-04-22T10:00:00Z", cancelledAt: null,                  usedPromoCode: false },
-      { id: "s3", userName: "Grace Hopper",   plan: "basic", billingCycle: "monthly", amount: 9,   status: "active",    startDate: "2026-05-08T10:00:00Z", createdAt: "2026-05-08T10:00:00Z", cancelledAt: null,                  usedPromoCode: false },
-      { id: "s4", userName: "Alan Kay",       plan: "basic", billingCycle: "monthly", amount: 9,   status: "active",    startDate: "2026-05-30T10:00:00Z", createdAt: "2026-05-30T10:00:00Z", cancelledAt: null,                  usedPromoCode: false },
+      { id: "s1", userName: "Maya Patel",   plan: "pro",   billingCycle: "yearly",  amount: 480, status: "active",    startDate: "2026-03-15T10:00:00Z", createdAt: "2026-03-15T10:00:00Z", cancelledAt: null,                  usedPromoCode: true  },
+      { id: "s2", userName: "Sam Carter", plan: "basic", billingCycle: "monthly", amount: 9,   status: "active",    startDate: "2026-04-22T10:00:00Z", createdAt: "2026-04-22T10:00:00Z", cancelledAt: null,                  usedPromoCode: false },
+      { id: "s3", userName: "Priya Sharma",   plan: "basic", billingCycle: "monthly", amount: 9,   status: "active",    startDate: "2026-05-08T10:00:00Z", createdAt: "2026-05-08T10:00:00Z", cancelledAt: null,                  usedPromoCode: false },
+      { id: "s4", userName: "Noah Brooks",       plan: "basic", billingCycle: "monthly", amount: 9,   status: "active",    startDate: "2026-05-30T10:00:00Z", createdAt: "2026-05-30T10:00:00Z", cancelledAt: null,                  usedPromoCode: false },
     ],
     cancellationReasons: [
       { reason: "Not using enough",                  count: 1 },
       { reason: "Found alternative",                 count: 1 },
     ],
     cancelledSubscribers: [
-      { id: "c1", userName: "Donald Knuth",  plan: "basic", billingCycle: "monthly", amount: 9, startDate: "2026-02-10T10:00:00Z", cancelledAt: "2026-04-22T10:00:00Z", reason: "Not using enough",  feedback: "Light usage",     comment: null },
-      { id: "c2", userName: "Barbara Liskov",plan: "pro",   billingCycle: "monthly", amount: 40,startDate: "2026-03-01T10:00:00Z", cancelledAt: "2026-05-15T10:00:00Z", reason: "Found alternative", feedback: "Switched tools", comment: "Going with in-house build" },
+      { id: "c1", userName: "Aaron Chen",  plan: "basic", billingCycle: "monthly", amount: 9, startDate: "2026-02-10T10:00:00Z", cancelledAt: "2026-04-22T10:00:00Z", reason: "Not using enough",  feedback: "Light usage",     comment: null },
+      { id: "c2", userName: "Zoe Martinez",plan: "pro",   billingCycle: "monthly", amount: 40,startDate: "2026-03-01T10:00:00Z", cancelledAt: "2026-05-15T10:00:00Z", reason: "Found alternative", feedback: "Switched tools", comment: "Going with in-house build" },
     ],
   });
 }

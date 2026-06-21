@@ -16,11 +16,11 @@ export async function GET() {
       uniqueUsers: 24,
     },
     connectedAccountsList: [
-      { username: "@ada_lvc",      lastActiveAt: "2026-06-21T18:42:00Z", createdAt: "2026-04-12T10:00:00Z" },
-      { username: "@grace_h",      lastActiveAt: "2026-06-21T14:08:00Z", createdAt: "2026-04-18T10:00:00Z" },
-      { username: "@linus_t",      lastActiveAt: "2026-06-20T11:32:00Z", createdAt: "2026-04-22T10:00:00Z" },
-      { username: "@donald_k",     lastActiveAt: "2026-06-19T16:21:00Z", createdAt: "2026-05-02T10:00:00Z" },
-      { username: "@barbara_lk",   lastActiveAt: "2026-06-18T09:47:00Z", createdAt: "2026-05-08T10:00:00Z" },
+      { username: "@maya_p",      lastActiveAt: "2026-06-21T18:42:00Z", createdAt: "2026-04-12T10:00:00Z" },
+      { username: "@priya_s",      lastActiveAt: "2026-06-21T14:08:00Z", createdAt: "2026-04-18T10:00:00Z" },
+      { username: "@sam_c",      lastActiveAt: "2026-06-20T11:32:00Z", createdAt: "2026-04-22T10:00:00Z" },
+      { username: "@aaron_c",     lastActiveAt: "2026-06-19T16:21:00Z", createdAt: "2026-05-02T10:00:00Z" },
+      { username: "@zoe_m",   lastActiveAt: "2026-06-18T09:47:00Z", createdAt: "2026-05-08T10:00:00Z" },
     ],
     activity: {
       aiQueriesPerDay: dates.map((date, i) => ({ date, count: queries[i] })),
@@ -40,11 +40,11 @@ export async function GET() {
       { action: "delete",    count: 12  },
     ],
     topUsers: [
-      { userId: "u_001", fullUserId: "u_001_full", userName: "Ada Lovelace",     telegramUsername: "@ada_lvc",    queries: 124, seeds: 18, credits: 248 },
-      { userId: "u_003", fullUserId: "u_003_full", userName: "Grace Hopper",     telegramUsername: "@grace_h",    queries: 96,  seeds: 12, credits: 192 },
-      { userId: "u_002", fullUserId: "u_002_full", userName: "Linus Torvalds",   telegramUsername: "@linus_t",    queries: 72,  seeds: 9,  credits: 144 },
-      { userId: "u_006", fullUserId: "u_006_full", userName: "Donald Knuth",     telegramUsername: "@donald_k",   queries: 64,  seeds: 8,  credits: 128 },
-      { userId: "u_005", fullUserId: "u_005_full", userName: "Barbara Liskov",   telegramUsername: "@barbara_lk", queries: 42,  seeds: 6,  credits: 84  },
+      { userId: "u_001", fullUserId: "u_001_full", userName: "Maya Patel",     telegramUsername: "@maya_p",    queries: 124, seeds: 18, credits: 248 },
+      { userId: "u_003", fullUserId: "u_003_full", userName: "Priya Sharma",     telegramUsername: "@priya_s",    queries: 96,  seeds: 12, credits: 192 },
+      { userId: "u_002", fullUserId: "u_002_full", userName: "Sam Carter",   telegramUsername: "@sam_c",    queries: 72,  seeds: 9,  credits: 144 },
+      { userId: "u_006", fullUserId: "u_006_full", userName: "Aaron Chen",     telegramUsername: "@aaron_c",   queries: 64,  seeds: 8,  credits: 128 },
+      { userId: "u_005", fullUserId: "u_005_full", userName: "Zoe Martinez",   telegramUsername: "@zoe_m", queries: 42,  seeds: 6,  credits: 84  },
     ],
     recentSeeds: [
       { id: "s1", title: "Vercel docs — Functions",        type: "url",  createdAt: "2026-06-21T17:42:00Z" },

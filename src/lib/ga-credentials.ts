@@ -220,7 +220,7 @@ export async function clearYouTubeCredentials(): Promise<void> {
 }
 
 // LinkedIn admin email
-export const LINKEDIN_ADMIN_EMAIL = "muhammad.bilal@bigimmersive.com";
+export const LINKEDIN_ADMIN_EMAIL = "admin@bigimmersive.com";
 
 // Get LinkedIn credentials from database
 export async function getLinkedInCredentials(): Promise<{ accessToken: string } | null> {

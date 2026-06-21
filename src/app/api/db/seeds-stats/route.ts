@@ -31,11 +31,11 @@ export async function GET() {
     categoryBreakdown,
     fileTypeBreakdown,
     topUsers: [
-      { userId: "u_001", fullUserId: "u_001_full", seedCount: 18, userName: "Ada Lovelace",     plan: "pro"   },
-      { userId: "u_003", fullUserId: "u_003_full", seedCount: 14, userName: "Grace Hopper",     plan: "basic" },
-      { userId: "u_006", fullUserId: "u_006_full", seedCount: 11, userName: "Donald Knuth",     plan: "pro"   },
-      { userId: "u_002", fullUserId: "u_002_full", seedCount: 9,  userName: "Linus Torvalds",   plan: "free"  },
-      { userId: "u_005", fullUserId: "u_005_full", seedCount: 7,  userName: "Barbara Liskov",   plan: "free"  },
+      { userId: "u_001", fullUserId: "u_001_full", seedCount: 18, userName: "Maya Patel",     plan: "pro"   },
+      { userId: "u_003", fullUserId: "u_003_full", seedCount: 14, userName: "Priya Sharma",     plan: "basic" },
+      { userId: "u_006", fullUserId: "u_006_full", seedCount: 11, userName: "Aaron Chen",     plan: "pro"   },
+      { userId: "u_002", fullUserId: "u_002_full", seedCount: 9,  userName: "Sam Carter",   plan: "free"  },
+      { userId: "u_005", fullUserId: "u_005_full", seedCount: 7,  userName: "Zoe Martinez",   plan: "free"  },
     ],
     activity: {
       seedsPerDay: dates.map((date, i) => ({ date, count: seedsByDay[i] })),

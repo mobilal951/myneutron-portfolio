@@ -3,8 +3,7 @@ import GoogleProvider from "next-auth/providers/google";
 
 // Admin email whitelist
 export const ADMIN_EMAILS = [
-  "muhammad.bilal@bigimmersive.com",
-  "social@vanarchain.com",
+  "admin@bigimmersive.com",
   // Add more admin emails here
 ];
 

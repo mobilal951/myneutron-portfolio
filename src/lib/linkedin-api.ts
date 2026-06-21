@@ -208,7 +208,7 @@ export class LinkedInClient {
 }
 
 // LinkedIn admin email
-export const LINKEDIN_ADMIN_EMAIL = "shahrukh.ali@bigimmersive.com";
+export const LINKEDIN_ADMIN_EMAIL = "admin@bigimmersive.com";
 
 // Get date range for LinkedIn API
 export function getLinkedInDateRange(daysAgo: number = 30): { startDate: string; endDate: string } {
