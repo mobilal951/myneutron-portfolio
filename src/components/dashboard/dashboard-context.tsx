@@ -40,7 +40,7 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
   const { data: session, status } = useSession();
   const [properties, setProperties] = React.useState<Property[]>([]);
   const [selectedProperty, setSelectedProperty] = React.useState<string | null>(
-    null
+    "properties/501072751"
   );
   const [dateRange, setDateRange] = React.useState<DateRange | undefined>({
     from: subDays(new Date(), 30),
@@ -51,12 +51,14 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
   const [refreshKey, setRefreshKey] = React.useState(0);
   const [refreshing, setRefreshing] = React.useState(false);
   const [lastUpdated, setLastUpdated] = React.useState<Date | null>(null);
-  const [isGAConnected, setIsGAConnected] = React.useState(false);
+  // Portfolio demo: pre-seed isGAConnected=true so dashboard pages render
+  // synthetic data on first paint instead of the "Connect GA" placeholder.
+  const [isGAConnected, setIsGAConnected] = React.useState(true);
 
   const isAuthenticated = status === "authenticated";
   const isAdmin = session?.isAdmin || false;
-  // Demo mode only when GA is not connected
-  const isDemoMode = !isGAConnected;
+  // Portfolio demo: never enter the "Connect GA" empty state.
+  const isDemoMode = false;
 
   const refresh = React.useCallback(() => {
     setRefreshing(true);
